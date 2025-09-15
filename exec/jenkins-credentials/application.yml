@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: backend
+
+  # MySQL Settings
+  datasource:
+    url: jdbc:mysql://localhost:3306/board?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&useUnicode=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+
+  # JPA/Hibernate Settings
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        jdbc:
+          time_zone: Asia/Seoul
+    show-sql: true
+    open-in-view: false
+
+#logging:
+#  level:
+#    root: DEBUG
