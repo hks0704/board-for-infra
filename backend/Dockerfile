@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-buster
+FROM openjdk:17-jdk-bullseye
 WORKDIR /home/app
 COPY build/libs/*.jar app.jar
 RUN apt-get update && \
