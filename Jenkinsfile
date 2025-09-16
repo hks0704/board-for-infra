@@ -17,18 +17,17 @@ pipeline {
 
 
     stages {
-        // 젠킨스 UI상에서 설정한 부분 삭제
-        // stage('Checkout') {
-        //     steps {
-        //         echo 'Starting Repository Checkout'
-        //         echo '<<<<<<<<<< Checkout Repository Start >>>>>>>>>>'
+        stage('Checkout') {
+            steps {
+                echo 'Starting Repository Checkout'
+                echo '<<<<<<<<<< Checkout Repository Start >>>>>>>>>>'
 
-        //         git branch: 'main', credentialsId: 'GITHUB_ACCESS_TOKEN',
-        //         url: 'https://github.com/hks0704/board-for-infra'
+                git branch: 'main', credentialsId: 'GITHUB_ACCESS_TOKEN',
+                url: 'https://github.com/hks0704/board-for-infra'
 
-        //         echo '<<<<<<<<<< Checkout Repository Complete Successfully >>>>>>>>>>'
-        //     }
-        // }
+                echo '<<<<<<<<<< Checkout Repository Complete Successfully >>>>>>>>>>'
+            }
+        }
 
         stage('Build Backend') {
             steps {

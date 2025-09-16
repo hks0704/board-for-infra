@@ -8,8 +8,8 @@ IMAGE_NAME="server/backend"
 CONTAINER_NAME="server-backend"
 
 # Docker에서 이미지, 컨테이너 ID 조회
-IMAGE_ID = $(docker images -q "${IMAGE_NAME}" || true)
-CONTAINER_ID = $(docker ps -aqf "name=${CONTAINER_NAME}" || true)
+IMAGE_ID=$(docker images -q "${IMAGE_NAME}" || true)
+CONTAINER_ID=$(docker ps -aqf "name=${CONTAINER_NAME}" || true)
 
 # ANSI Color
 GREEN="\033[0;32m"
