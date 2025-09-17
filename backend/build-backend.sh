@@ -38,7 +38,7 @@ remove_container() {
 remove_image() {
   if [ -n "${IMAGE_ID}" ]; then
     log "이미지 ${IMAGE_NAME} 존재. 삭제 시작..."
-    docker rmi -f ${CONTAINER_ID} || error_exit "이미지 삭제 실패"
+    docker rmi -f ${IMAGE_ID} || error_exit "이미지 삭제 실패"
     log "컨테이너 삭제 완료"
   fi
 }
