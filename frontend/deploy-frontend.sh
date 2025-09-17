@@ -34,8 +34,8 @@ echo ""
 
 # Run Docker Container
 echo ">>> DOCKER CONTAINER $CONTAINER_NAME 실행 시작..."
-# -p 5173:5173 외부 5173 포트에서 받은 요청을 컨테이너 내부 5173 포트로 보냄
-docker run -d -p 5173:5173 \
+# -p 3000:3000 외부 3000 포트에서 받은 요청을 컨테이너 내부 3000 포트로 보냄
+docker run -d -p 3000:3000 \
     --name $CONTAINER_NAME $IMAGE_NAME || {
         echo ">>> DOCKER IMAGE $IMAGE_NAME 실행 실패"
         exit 1
